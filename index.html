@@ -2,89 +2,98 @@ index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday Vanshikaa</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: linear-gradient(to bottom right, #ffe6ee, #fff);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<title>Heartbeat Heart</title>
 
-        .heart {
-            position: relative;
-            width: 200px;
-            height: 180px;
-            background-color: red;
-            transform: rotate(-45deg);
-            margin-bottom: 40px;
-        }
+<style>
+    body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #ffe6ee;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
 
-        .heart::before,
-        .heart::after {
-            content: "";
-            position: absolute;
-            width: 200px;
-            height: 180px;
-            background-color: red;
-            border-radius: 50%;
-        }
+    .heart-container {
+        animation: beat 2s infinite;
+        margin-bottom: 25px;
+    }
 
-        .heart::before {
-            top: -100px;
-            left: 0;
-        }
+    .heart {
+        position: relative;
+        width: 220px;          /* ↓ reduced */
+        height: 195px;         /* ↓ reduced */
+        background: red;
+        transform: rotate(-45deg);
+    }
 
-        .heart::after {
-            left: 100px;
-            top: 0;
-        }
+    .heart::before,
+    .heart::after {
+        content: "";
+        position: absolute;
+        width: 220px;          /* ↓ reduced */
+        height: 195px;         /* ↓ reduced */
+        background: red;
+        border-radius: 50%;
+    }
 
-        .name {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+    .heart::before {
+        top: -110px;           /* adjusted */
+        left: 0;
+    }
 
-        .wish {
-            max-width: 600px;
-            font-size: 18px;
-            color: #444;
-            background: #ffffffcc;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+    .heart::after {
+        left: 110px;           /* adjusted */
+        top: 0;
+    }
 
-        h1 {
-            color: #ff3366;
-            margin-bottom: 15px;
-        }
-    </style>
+    .text {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        color: white;
+        font-size: 22px;       /* ↓ reduced */
+        font-weight: bold;
+        text-align: center;
+        width: 170px;
+        letter-spacing: 2px;
+    }
+
+    .wish {
+        max-width: 480px;
+        background: #ffffffcc;
+        padding: 18px;
+        border-radius: 15px;
+        font-size: 17px;
+        color: #444;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    @keyframes beat {
+        0%   { transform: scale(1); }
+        25%  { transform: scale(1.08); }
+        50%  { transform: scale(1); }
+        75%  { transform: scale(1.12); }
+        100% { transform: scale(1); }
+    }
+</style>
 </head>
+
 <body>
 
+<div class="heart-container">
     <div class="heart">
-        <div class="name">Vanshikaa</div>
+        <div class="text">VEDI</div>
     </div>
+</div>
 
-    <h1>Happy Birthday 🎉</h1>
-
-    <div class="wish">
-        Dear  cutuuu,<br><br>
+<div class="wish">
+    💖   Dear  cutuuu,<br><br>
         On this day ,i wnna wish you all the happiness darloo,
         I wish tu hamesha khush rhe and always have a smile on your face,
         I wish apn dono teri success sath me celebrate kre your first trip,
@@ -94,10 +103,8 @@ index.html
         💖✨
         <br><br>
         Happy Birthday once again!
-    </div>
+
+</div>
 
 </body>
 </html>
-
-
-
